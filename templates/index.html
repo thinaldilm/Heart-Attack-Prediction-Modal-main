@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack Prediction</title>
+</head>
+<body>
+    <h1>Heart Attack Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+        <label for="sex">Sex:</label>
+        <input type="text" id="sex" name="sex" required><br>
+        <label for="cholesterol">Cholesterol:</label>
+        <input type="number" id="cholesterol" name="cholesterol" required><br>
+        <label for="blood_pressure">Blood Pressure:</label>
+        <input type="number" id="blood_pressure" name="blood_pressure" required><br>
+        <label for="max_heart_rate">Max Heart Rate:</label>
+        <input type="number" id="max_heart_rate" name="max_heart_rate" required><br>
+        <label for="exercise_induced_angina">Diabetes:</label>
+        <input type="number" id="exercise_induced_angina" name="exercise_induced_angina" required><br>
+        <label for="family_history">Family History:</label>
+        <input type="number" id="family_history" name="family_history" required><br>
+        <label for="smoking">Smoking:</label>
+        <input type="number" id="smoking" name="smoking" required><br>
+        <label for="obesity">Obesity:</label>
+        <input type="number" id="obesity" name="obesity" required><br>
+        <label for="alcohol_consumption">Alcohol Consumption:</label>
+        <input type="number" id="alcohol_consumption" name="alcohol_consumption" required><br>
+        <label for="exercise_hours_per_week">Exercise Hours Per Week:</label>
+        <input type="number" id="exercise_hours_per_week" name="exercise_hours_per_week" required><br>
+        <label for="diet_healthy">Diet Healthy:</label>
+        <input type="number" id="diet_healthy" name="diet_healthy" required><br>
+        <label for="diet_unhealthy">Diet Unhealthy:</label>
+        <input type="number" id="diet_unhealthy" name="diet_unhealthy" required><br>
+        <label for="previous_heart_problems">Previous Heart Problems:</label>
+        <input type="number" id="previous_heart_problems" name="previous_heart_problems" required><br>
+        <label for="medication_use">Medication Use:</label>
+        <input type="number" id="medication_use" name="medication_use" required><br>
+        <label for="stress_level">Stress Level:</label>
+        <input type="number" id="stress_level" name="stress_level" required><br>
+        <label for="sedentary_hours_per_day">Sedentary Hours Per Day:</label>
+        <input type="number" id="sedentary_hours_per_day" name="sedentary_hours_per_day" required><br>
+        <label for="income">Income:</label>
+        <input type="number" id="income" name="income" required><br>
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" required><br>
+        <label for="triglycerides">Triglycerides:</label>
+        <input type="number" id="triglycerides" name="triglycerides" required><br>
+        <label for="physical_activity_days_per_week">Physical Activity Days Per Week:</label>
+        <input type="number" id="physical_activity_days_per_week" name="physical_activity_days_per_week" required><br>
+        <label for="sleep_hours_per_day">Sleep Hours Per Day:</label>
+        <input type="number" id="sleep_hours_per_day" name="sleep_hours_per_day" required><br>
+        <input type="submit" value="Predict">
+
+    </form>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
